@@ -1,10 +1,11 @@
-var socket = io();
-$('form').submit(function(){
-    socket.emit('chat message', $('#m').val());
-    $('#m').val('');
-    return false;
-});
 
-socket.on('chat message', function(msg){
-    $('#messages').append($('<li>').text(msg));
-});
+//var obj = jQuery.parseJSON( '{ "name": "John" }' );
+//alert( obj.name === "John" );
+
+
+function getText(){
+    var url = "http://verksamtproxy.hackastack.de18292d.svc.dockerapp.io";
+    $.getJSON(url, function(data){
+        alert(data);
+    });
+}
