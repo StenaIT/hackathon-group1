@@ -19,7 +19,8 @@ function getText(){
             }
         }, this);
 
-        alert(description);
+        //alert(description);
+        $('div.translated').text(description);
     });
  });     
 }
